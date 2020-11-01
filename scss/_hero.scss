@@ -1,0 +1,146 @@
+// Hero
+#hero {
+  @include grid-position(#{1 / 2}, #{1 / 2});
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns:1fr ;
+  grid-template-rows:200px auto;
+  // Header
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    position: relative;
+    z-index: 1;
+    #logo {
+      @include grid-position(#{1 / 2}, #{1 / 2});
+      align-self: center;
+      justify-self: center;
+      padding: 40px 0px;
+      img {
+        width: 100%;
+      }
+    }
+    #nav-menu {
+      @include grid-position(#{2 / 4}, #{1 / 2});
+      align-self: center;
+      justify-self: left;
+      ul {
+        li {
+          list-style: none;
+          display: inline-block;
+          padding: 0px 15px;
+          text-transform: capitalize;
+          a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    #btn {
+      @include grid-position(#{4 / 5}, #{1 / 2});
+      justify-self: left;
+      align-self: center;
+      padding: 0px 10px;
+      #selection {
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $primary-color;
+        width: 44px;
+        margin: 10px 15px;
+      }
+      .contact-us {
+        padding: 15px 30px;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+        color: $secondary-color;
+        background: #fff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 1px 1px 5px #999;
+        a{
+          text-decoration: none;
+          color: $secondary-color;
+        }
+      }
+    }
+    #burger-menu {
+      display: none;
+    }
+  }
+  //   showcase
+  #showcase {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    .showcase-left {
+      align-self: center;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+      padding: 20px;
+      position: relative;
+      .showcase-heading {
+        @include grid-position(#{2 / 3}, #{1 / 2});
+        font-size: 3.5rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: $primary-color;
+      }
+      .showcase-text {
+        @include grid-position(#{2 / 3}, #{2 / 3});
+        font-size: 0.9rem;
+        color: #999;
+        font-weight: 400;
+        padding: 20px 10px;
+        line-height: 20px;
+      }
+      #btn {
+        @include grid-position(#{2 / 3}, #{3 / 4});
+        .btn-more,
+        .btn-get {
+          padding: 12px 30px;
+          border: 1px solid transparent;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          text-transform: capitalize;
+          font-weight: 600;
+          margin: 0px 10px;
+        }
+        .btn-more {
+          background-color: $secondary-color;
+          color: #fff;
+        }
+        .btn-get {
+          background-color: transparent;
+          color: $primary-color;
+        }
+      }
+    }
+    .showcase-right {
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      width: 90%;
+      .showcase-img {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 5vh;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+footer{
+    @include grid-position(#{1 / 2}, #{3 / 4});
+    background: $primary-color;
+    .footer-content{
+        text-align: center;
+        padding: 20px 0px;
+        h3{
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 10px 0px;
+        }
+        h1{
+            text-transform: uppercase;
+            color: $secondary-color;
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 10px 0px;
+        }
+        ul{
+            li{
+                display: inline-block;
+                list-style: none;
+                padding: 10px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .copy-right{
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 1rem;
+            padding: 20px 0px;
+        }
+    }
+}

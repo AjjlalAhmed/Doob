@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+// Container
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  // At-rule style
+  @import "at-rule";
+  font-family: "Work Sans", sans-serif;
+  // Hero style
+  @import "hero";
+  // Main style
+  @import "main";
+  // Footer style
+  @import "footer";
+
+  //   mediaQuerys
+  //   mediaQuery goes allways on last line
+
+  @import "mediaQuery";
+}

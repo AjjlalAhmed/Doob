@@ -1,0 +1,249 @@
+// Main
+main {
+  margin-top: 200px;
+  @include grid-position(#{1 / 2}, #{2 / 3});
+
+  // Services
+  #services {
+    background: url("../images/about-shape_02.png") no-repeat;
+    background-position-y: 100px;
+    padding: 100px 0px;
+    .services-content {
+      min-height: 50vh;
+      .service-cards {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: center;
+
+        //flex-wrap: wrap;
+        .card {
+          max-width: 350px;
+          display: flex;
+          flex-direction: column;
+          margin: 50px 30px;
+          h1 {
+            color: $primary-color;
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 10px 0px;
+          }
+          #btn {
+            padding: 20px 0px;
+            .btn-get {
+              padding: 10px 40px;
+              background: $secondary-color;
+              border: 1px solid transparent;
+              border-radius: 20px;
+              font-size: 1rem;
+              text-transform: capitalize;
+              font-weight: 600;
+              color: #fff;
+            }
+          }
+          img {
+            width: 60px;
+          }
+          h2 {
+            color: $primary-color;
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 20px 0px;
+            text-transform: capitalize;
+          }
+          P {
+            line-height: 25px;
+            color: $primary-color;
+            font-weight: 400;
+            font-size: 0.9rem;
+            padding: 20px 0px;
+          }
+        }
+      }
+    }
+  }
+  //   About
+  #about {
+    background: url("../images/about-shape_05.png") no-repeat;
+    background-position: right;
+    min-height: 60vh;
+    padding: 100px 0px;
+    .about-content {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      //flex-wrap: wrap;
+      .about-left {
+        text-align: center;
+        margin-bottom: 100px;
+        .about-img {
+          img {
+            width: 90%;
+          }
+        }
+      }
+      .about-right {
+        width: 500px;
+        margin: auto;
+        h3 {
+          color: $secondary-color;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 10px 0px;
+        }
+        h1 {
+          padding: 10px 0px;
+          color: $primary-color;
+          font-size: 2.5rem;
+          text-transform: capitalize;
+          font-weight: 600;
+          line-height: 50px;
+        }
+        P {
+          line-height: 25px;
+          color: $primary-color;
+          font-weight: 400;
+          font-size: 0.9rem;
+          padding: 20px 0px;
+        }
+      }
+    }
+  }
+  //   Blog
+  #blog {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: auto;
+    margin-top: 100px;
+    .blog-content {
+      @include grid-position(#{2 / 3}, #{1 / 2});
+      justify-self: center;
+      h3 {
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 10px 0px;
+      }
+      h1 {
+        color: $primary-color;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+      .blog-cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          max-width: 300px;
+          margin: 80px 0px;
+          padding: 30px;
+          h3 {
+            font-size: 1rem;
+            text-transform: capitalize;
+            color: $primary-color;
+            padding: 10px 0px;
+          }
+          h6 {
+            color: #999;
+            padding: 10px 0px;
+          }
+          p {
+            color: $primary-color;
+            font-size: 0.9rem;
+            line-height: 25px;
+            padding: 20px 0px;
+          }
+        }
+        .first-card {
+          background: $secondary-color;
+          padding: 30px;
+          h3 {
+            color: #fff;
+          }
+          h6 {
+            color: #fff;
+          }
+          p {
+            color: #ffff;
+            font-size: 300;
+          }
+        }
+      }
+    }
+  }
+  //   Contact us
+  #contact-us {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto;
+    .contact-content {
+      @include grid-position(#{2 / 3}, #{1 / 2});
+     
+      #contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        h3 {
+          color: $secondary-color;
+          font-size: 1.1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          @include grid-position(#{1 / 3}, #{1 / 2});
+        }
+        h1 {
+          color: $primary-color;
+          font-size: 2.5rem;
+          font-weight: 600;
+          text-transform: capitalize;
+          @include grid-position(#{1 / 3}, #{2 / 3});
+        }
+        #email {
+          @include grid-position(#{1 / 2}, #{3 / 4});
+          padding: 15px 4px;
+          border: 1px solid transparent;
+          background: #f4fafe;
+        }
+        #text {
+          @include grid-position(#{2 / 3}, #{3 / 4});
+          padding: 15px 4px;
+          border: 1px solid transparent;
+          background: #f4fafe;
+        }
+        textarea {
+          border: 1px solid transparent;
+          display: block;
+          background: #f4fafe;
+          padding: 5px;
+          @include grid-position(#{1 / 3}, #{4 / 5});
+        }
+        #btn {
+          @include grid-position(#{1 / 3}, #{5 / 6});
+          justify-self: center;
+          padding: 20px 0px;
+          .btn-submit{
+              padding: 10px 40px;
+              background: $secondary-color;
+              border: 1px solid transparent;
+              font-size: 1rem;
+              text-transform: capitalize;
+              color: #fff;
+              border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}

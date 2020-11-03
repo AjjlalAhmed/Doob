@@ -5,8 +5,8 @@
   position: relative;
   min-height: 100vh;
   display: grid;
-  grid-template-columns:1fr ;
-  grid-template-rows:200px auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px auto;
   // Header
   header {
     display: grid;
@@ -65,7 +65,7 @@
         font-weight: 600;
         font-size: 0.9rem;
         box-shadow: 1px 1px 5px #999;
-        a{
+        a {
           text-decoration: none;
           color: $secondary-color;
         }
@@ -129,13 +129,14 @@
       background-size: cover;
       background-position: left;
       background-repeat: no-repeat;
-      width: 90%;
+      width: 100%;
       .showcase-img {
         align-self: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
+        right: 0;
         top: 5vh;
         img {
           width: 100%;

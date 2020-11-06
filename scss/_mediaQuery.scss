@@ -256,6 +256,7 @@
 @media only screen and (max-width: 525px) {
   // Hero
   #hero {
+    grid-template-rows: 100px auto;
     // Header
     header {
       grid-template-columns: 1fr 1fr;
@@ -311,6 +312,7 @@
       }
     }
     #showcase {
+     align-self: center;
       margin: 0;
       padding: 0;
       .showcase-left {
